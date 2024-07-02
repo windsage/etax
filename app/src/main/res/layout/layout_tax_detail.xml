@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="604px"
+    android:background="@color/white"
+    android:minHeight="604px">
+
+    <ImageView
+        android:layout_width="30px"
+        android:layout_height="50px"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="277px"
+        android:layout_marginRight="68px"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_arow" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="604px"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="40px"
+            android:background="@color/bg_main" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="57px"
+            android:orientation="horizontal"
+            android:paddingLeft="57px"
+            android:paddingRight="65px">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="工资薪金"
+                android:textColor="@color/black_title"
+                android:textSize="54px" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1px"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="96px"
+                android:text="2023-12"
+                android:textColor="@color/black_title"
+                android:textSize="54px" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_cat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20px"
+            android:paddingLeft="57px"
+            android:text="所得项目小类:"
+            android:textColor="@color/text_little"
+            android:textSize="46px" />
+
+        <TextView
+            android:id="@+id/tv_company"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20px"
+            android:paddingLeft="57px"
+            android:text="所得项目小类:"
+            android:textColor="@color/text_little"
+            android:textSize="46px" />
+
+        <TextView
+            android:id="@+id/tv_salary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20px"
+            android:paddingLeft="57px"
+            android:text="所得项目小类:"
+            android:textColor="@color/text_little"
+            android:textSize="46px" />
+
+        <TextView
+            android:id="@+id/tv_tax"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20px"
+            android:paddingLeft="57px"
+            android:text="所得项目小类:"
+            android:textColor="@color/text_little"
+            android:textSize="46px" />
+    </LinearLayout>
+
+</RelativeLayout>
