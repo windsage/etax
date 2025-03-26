@@ -56,7 +56,11 @@ public class ItemAdapter extends BaseAdapter {
         Detail detail = details.get(position);
         holder.month.setText(detail.month);
         holder.company.setText("扣缴义务人:  " + detail.company);
-        holder.tax.setText("已申报税额:  " + df.format(detail.tax) + "元");
+        if (detail.tax == 0) {
+            holder.tax.setText("已申报税额:  " + "0.00元");
+        } else {
+            holder.tax.setText("已申报税额:  " + df.format(detail.tax) + "元");
+        }
         holder.salary.setText("收入:  " + df.format(detail.salary) + "元");
         holder.cat.setText("所得项目小类:  " + detail.littleCat);
         return convertView;
