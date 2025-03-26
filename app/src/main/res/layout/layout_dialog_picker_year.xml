@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:ignore="MissingDefaultResource">
+    android:orientation="vertical">
 
-<!--    <com.chao.mylibrary.view.ScrollPickerView-->
-<!--        android:layout_height="300dp"-->
-<!--        android:background="#00ff00"-->
+<!--    <com.ozcanalasalvar.datepicker.view.datepicker.DatePicker-->
+<!--        android:id="@+id/datepicker"-->
 <!--        android:layout_width="match_parent"-->
-<!--        android:id="@+id/scroll_picker_year"/>-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:darkModeEnabled="true"-->
+<!--        app:offset="3"-->
+<!--        app:textSize="19" />-->
 </LinearLayout>

@@ -10,7 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/AnimActivity">
         <activity android:name=".QueryActivity"/>
-        <activity android:name=".LoadingActivity">
+        <activity android:name=".LoadingActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

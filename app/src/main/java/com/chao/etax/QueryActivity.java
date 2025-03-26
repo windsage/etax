@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.drawable.AnimatedImageDrawable;
+import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
@@ -14,11 +16,15 @@ import android.os.Message;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.PopupWindow;
 import android.widget.Toast;
 
+
+import com.ozcanalasalvar.datepicker.compose.datepicker.WheelDatePickerKt;
+import com.ozcanalasalvar.datepicker.view.datepicker.DatePicker;
 
 import java.lang.ref.WeakReference;
 import java.lang.reflect.Array;
@@ -57,39 +63,23 @@ public class QueryActivity extends AppCompatActivity {
 //        button.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
-//                mPopupWindow.showAtLocation(getWindow().getDecorView(), Gravity.NO_GRAVITY,100,100);
+//                mPopupWindow.showAtLocation(getWindow().getDecorView().findViewById(android.R.id.content), Gravity.BOTTOM,0   ,0);
 //            }
 //        });
     }
 
-//    private void initYearPicker() {
-//        View popupView = LayoutInflater.from(this).inflate(R.layout.layout_dialog_picker_year, null);
-//
-//        ScrollPickerView pickerView = popupView.findViewById(R.id.scroll_picker_year);
-//        pickerView.setLayoutManager(new LinearLayoutManager(this));
-//        String[] yearArray = {"2019","2020","2021","2022","2023","2024"};
-//        List<String> data = Arrays.asList(yearArray);
-//        ScrollPickerAdapter.ScrollPickerAdapterBuilder<String> builder =
-//                new ScrollPickerAdapter.ScrollPickerAdapterBuilder<String>(this)
-//                        .setDataList(data)
-//                        .selectedItemOffset(1)
-//                        .visibleItemNumber(3)
-//                        .setDivideLineColor("#E5E5E5")
-//                        .setItemViewProvider(null)
-//                        .setOnClickListener(new ScrollPickerAdapter.OnClickListener() {
-//                            @Override
-//                            public void onSelectedItemClicked(View v) {
-//                                String text = (String) v.getTag();
-//                                if (text != null) {
-//                                    Toast.makeText(QueryActivity.this, text, Toast.LENGTH_SHORT).show();
-//                                }
-//                            }
-//                        });
-//        ScrollPickerAdapter mScrollPickerAdapter = builder.build();
-//        pickerView.setAdapter(mScrollPickerAdapter);
-//        mPopupWindow = new PopupWindow();
-//        mPopupWindow.setContentView(popupView);
-//    }
+    private void initYearPicker() {
+        View popupView = LayoutInflater.from(this).inflate(R.layout.layout_dialog_picker_year, null);
+
+//        DatePicker datePicker = popupView.findViewById(R.id.datepicker);
+
+        mPopupWindow = new PopupWindow(popupView, ViewGroup.LayoutParams.MATCH_PARENT,  // 宽度
+                ViewGroup.LayoutParams.WRAP_CONTENT);
+        mPopupWindow.setFocusable(true);
+        mPopupWindow.setOutsideTouchable(true);
+        mPopupWindow.setTouchable(true);
+        mPopupWindow.setBackgroundDrawable(new ColorDrawable(Color.RED));
+    }
 
     @Override
     protected void onResume() {
