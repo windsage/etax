@@ -11,4 +11,22 @@
         <item name="android:windowAnimationStyle">@style/anim_fade</item>
         <item name="android:windowNoTitle">true</item>
     </style>
+
+    <style name="dafa" parent="Theme.MaterialComponents.Dialog">
+
+    </style>
+    <!-- 底部弹窗主题 -->
+    <style name="BottomDialogTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@style/BottomDialogAnimation</item>
+    </style>
+
+    <!-- 窗口动画 -->
+    <style name="BottomDialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_bottom</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_bottom</item>
+    </style>
 </resources>

@@ -1,4 +1,4 @@
-package com.chao.etax;
+package com.chao.etax.model;
 
 public class Detail {
     public String littleCat;

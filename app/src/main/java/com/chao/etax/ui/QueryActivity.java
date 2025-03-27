@@ -1,36 +1,24 @@
-package com.chao.etax;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
+package com.chao.etax.ui;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.graphics.drawable.AnimatedImageDrawable;
-import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.PopupWindow;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
-import com.ozcanalasalvar.datepicker.compose.datepicker.WheelDatePickerKt;
-import com.ozcanalasalvar.datepicker.view.datepicker.DatePicker;
+import com.chao.etax.R;
 
 import java.lang.ref.WeakReference;
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 public class QueryActivity extends AppCompatActivity {
 
@@ -59,26 +47,17 @@ public class QueryActivity extends AppCompatActivity {
             bgYear.setImageResource(R.drawable.query_2025);
         }
         loading.setImageResource(R.drawable.web_loading);
-        button.setOnClickListener(v -> myHandler.sendEmptyMessage(0));
-//        button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                mPopupWindow.showAtLocation(getWindow().getDecorView().findViewById(android.R.id.content), Gravity.BOTTOM,0   ,0);
-//            }
-//        });
-    }
-
-    private void initYearPicker() {
-        View popupView = LayoutInflater.from(this).inflate(R.layout.layout_dialog_picker_year, null);
-
-//        DatePicker datePicker = popupView.findViewById(R.id.datepicker);
-
-        mPopupWindow = new PopupWindow(popupView, ViewGroup.LayoutParams.MATCH_PARENT,  // 宽度
-                ViewGroup.LayoutParams.WRAP_CONTENT);
-        mPopupWindow.setFocusable(true);
-        mPopupWindow.setOutsideTouchable(true);
-        mPopupWindow.setTouchable(true);
-        mPopupWindow.setBackgroundDrawable(new ColorDrawable(Color.RED));
+//        button.setOnClickListener(v -> myHandler.sendEmptyMessage(0));
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                YearPickerDialog dialog = new YearPickerDialog();
+                dialog.setOnYearSelectedListener(year ->
+                        Toast.makeText(QueryActivity.this, "已选择：" + year, Toast.LENGTH_SHORT).show()
+                );
+                dialog.show(getSupportFragmentManager(), "YearPicker");
+            }
+        });
     }
 
     @Override

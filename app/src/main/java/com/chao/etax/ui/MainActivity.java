@@ -1,4 +1,4 @@
-package com.chao.etax;
+package com.chao.etax.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,6 +6,10 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.chao.etax.R;
+import com.chao.etax.adapter.ItemAdapter;
+import com.chao.etax.model.Detail;
 
 import java.util.ArrayList;
 

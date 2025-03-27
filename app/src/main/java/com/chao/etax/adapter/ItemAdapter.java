@@ -1,4 +1,4 @@
-package com.chao.etax;
+package com.chao.etax.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -6,6 +6,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
+
+import com.chao.etax.model.Detail;
+import com.chao.etax.R;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;

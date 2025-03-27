@@ -1,12 +1,14 @@
-package com.chao.etax;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
+package com.chao.etax.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.chao.etax.R;
 
 import java.lang.ref.WeakReference;
 
