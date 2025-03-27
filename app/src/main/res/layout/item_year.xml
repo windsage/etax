@@ -7,7 +7,7 @@
     android:layout_height="wrap_content"
     android:background="?attr/selectableItemBackground"
     android:gravity="center"
-    android:padding="8dp"
-    android:minHeight="30px"
-    android:textSize="14sp"
+    android:minHeight="128px"
+    android:textColor="#afb2b2"
+    android:textSize="48px"
     tools:text="2025" />

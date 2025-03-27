@@ -8,13 +8,15 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="16dp">
+        android:layout_height="140px">
 
         <TextView
             android:id="@+id/btn_cancel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="50px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="48px"
             android:layout_alignParentLeft="true"
             android:text="取消"
             android:textColor="@color/black" />
@@ -23,14 +25,24 @@
             android:id="@+id/btn_confirm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="50px"
+            android:layout_marginRight="48px"
+            android:layout_centerVertical="true"
             android:layout_alignParentRight="true"
             android:text="确定"
             android:textColor="@color/blue_aa" />
 
     </RelativeLayout>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#E1E5E9"/>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_year"
+        android:paddingTop="40px"
+        android:paddingBottom="40px"
         android:layout_width="match_parent"
-        android:layout_height="150dp" />
+        android:layout_height="976px" />
 </LinearLayout>

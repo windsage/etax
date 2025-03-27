@@ -10,8 +10,7 @@ import android.os.Message;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.PopupWindow;
-import android.widget.Toast;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,37 +23,33 @@ public class QueryActivity extends AppCompatActivity {
 
     private ImageView loading, bgYear;
     private MyHandler myHandler;
-    private int year;
-    private PopupWindow mPopupWindow;
+    private int mYear;
+    private TextView selectYear;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_query);
         Intent intent = getIntent();
-        year = intent.getIntExtra("year", 2025);
+        mYear = intent.getIntExtra("year", 2025);
         myHandler = new MyHandler(this);
         Button button = findViewById(R.id.query);
-//        initYearPicker();
 
         loading = findViewById(R.id.iv_loading);
         bgYear = findViewById(R.id.iv_year);
-        if (year == 2024) {
-            bgYear.setImageResource(R.drawable.query_2024);
-        } else if (year == 2023) {
-            bgYear.setImageResource(R.drawable.query_2023);
-        } else if (year == 2025) {
-            bgYear.setImageResource(R.drawable.query_2025);
-        }
+        selectYear = findViewById(R.id.sc_year);
         loading.setImageResource(R.drawable.web_loading);
-//        button.setOnClickListener(v -> myHandler.sendEmptyMessage(0));
-        button.setOnClickListener(new View.OnClickListener() {
+        button.setOnClickListener(v -> myHandler.sendEmptyMessage(0));
+        selectYear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                YearPickerDialog dialog = new YearPickerDialog();
-                dialog.setOnYearSelectedListener(year ->
-                        Toast.makeText(QueryActivity.this, "已选择：" + year, Toast.LENGTH_SHORT).show()
-                );
+                String text = selectYear.getText().toString();
+                int temp = Integer.valueOf(text);
+                YearPickerDialog dialog = YearPickerDialog.newInstance(temp);
+                dialog.setOnYearSelectedListener(year -> {
+                    mYear = year;
+                    selectYear.setText(String.valueOf(year));
+                });
                 dialog.show(getSupportFragmentManager(), "YearPicker");
             }
         });
@@ -88,7 +83,7 @@ public class QueryActivity extends AppCompatActivity {
                 }
             }
             Intent intent = new Intent(activity, MainActivity.class);
-            intent.putExtra("year", activity.year);
+            intent.putExtra("year", activity.mYear);
             activity.startActivity(intent);
         }
     }

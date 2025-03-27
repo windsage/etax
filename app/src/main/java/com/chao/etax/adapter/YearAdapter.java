@@ -1,5 +1,6 @@
 package com.chao.etax.adapter;
 
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,15 +17,16 @@ import java.util.List;
 // YearAdapter.java
 public class YearAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private List<Year> items;
-    private OnYearSelectedListener listener;
+    private Year selectedYear;
 
-    public interface OnYearSelectedListener {
-        void onYearSelected(int year);
+    public void setSelectedYear(Year year) {
+        this.selectedYear = year;
+        notifyDataSetChanged();
     }
 
-    public YearAdapter(List<Year> items, OnYearSelectedListener listener) {
+    public YearAdapter(List<Year> items, Year defaultYear) {
         this.items = items;
-        this.listener = listener;
+        this.selectedYear = defaultYear; // 初始化时设置默认选中项
     }
 
     @NonNull
@@ -39,7 +41,7 @@ public class YearAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
         Year item = items.get(position);
         if (holder instanceof YearViewHolder) {
-            ((YearViewHolder) holder).bind((Year) item, listener);
+            ((YearViewHolder) holder).bind((Year) item, selectedYear!= null && selectedYear.equals(item));
         }
     }
 
@@ -57,14 +59,18 @@ public class YearAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             tvYear = itemView.findViewById(R.id.tv_year);
         }
 
-        void bind(final Year year, final OnYearSelectedListener listener) {
-            tvYear.setText(String.valueOf(year.getValue()));
-            tvYear.setSelected(year.isSelected());
-            tvYear.setOnClickListener(v -> {
-                if (listener != null) {
-                    listener.onYearSelected(year.getValue());
-                }
-            });
+        void bind(final Year year, boolean isSelected) {
+            if (year.getValue() < 2019 || year.getValue() > 2025) {
+                tvYear.setText("");
+            } else {
+                tvYear.setText(String.valueOf(year.getValue()));
+            }
+            if (isSelected){
+                tvYear.setTextColor(Color.parseColor("#181f25"));
+            } else {
+                tvYear.setTextColor(Color.parseColor("#afb2b2"));
+            }
+
         }
     }
 

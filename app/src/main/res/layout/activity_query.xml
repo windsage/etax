@@ -13,6 +13,19 @@
         android:scaleType="fitXY"
         android:src="@drawable/query_2023" />
 
+    <TextView
+        android:id="@+id/sc_year"
+        android:layout_width="860px"
+        android:layout_height="155px"
+        android:layout_marginLeft="200px"
+        android:layout_marginTop="340px"
+        android:background="#ffffff"
+        android:gravity="center_vertical"
+        android:paddingLeft="240px"
+        android:text="2025"
+        android:textColor="#181f25"
+        android:textSize="50px" />
+
 
     <ImageView
         android:id="@+id/iv_loading"
@@ -32,7 +45,7 @@
         android:layout_marginLeft="64px"
         android:layout_marginRight="64px"
         android:layout_marginBottom="815px"
-        android:background="#ff0000" />
+        android:background="#00000000" />
 
     <View
         android:id="@+id/overlay"

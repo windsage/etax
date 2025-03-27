@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 2023年数据 -->
+    <string-array name="array_month_2023">
+        <item>2023-01</item>
+        <item>2023-02</item>
+        <item>2023-03</item>
+        <item>2023-04</item>
+        <item>2023-04</item>
+        <item>2023-05</item>
+        <item>2023-06</item>
+        <item>2023-07</item>
+        <item>2023-08</item>
+        <item>2023-09</item>
+        <item>2023-10</item>
+        <item>2023-11</item>
+        <item>2023-12</item>
+    </string-array>
+
+    <string-array name="array_salary_2023">
+        <item>64133.00</item>
+        <item>71097.18</item>
+        <item>64369.44</item>
+        <item>230878.00</item>
+        <item>64624.67</item>
+        <item>73386.34</item>
+        <item>65394.78</item>
+        <item>65484.34</item>
+        <item>65394.78</item>
+        <item>65394.78</item>
+        <item>71623.65</item>
+        <item>71482.09</item>
+        <item>65271.25</item>
+    </string-array>
+
+    <string-array name="array_tax_2023">
+        <item>2324.11</item>
+        <item>5240.53</item>
+        <item>5120.15</item>
+        <item>44765.60</item>
+        <item>9486.55</item>
+        <item>11238.89</item>
+        <item>9640.58</item>
+        <item>12065.81</item>
+        <item>11918.03</item>
+        <item>9042.57</item>
+        <item>15570.30</item>
+        <item>15527.83</item>
+        <item>13664.58</item>
+    </string-array>
+
+
+    <string-array name="array_company_2023">
+        <item>上海铂星科技有限公司</item>
+        <item>上海铂星科技有限公司</item>
+        <item>上海铂星科技有限公司</item>
+        <item>上海铂星科技有限公司</item>
+        <item>上海铂星科技有限公司</item>
+        <item>上海铂星科技有限公司</item>
+        <item>上海铂星科技有限公司</item>
+        <item>上海铂星科技有限公司</item>
+        <item>上海铂星科技有限公司</item>
+        <item>上海铂星科技有限公司</item>
+        <item>上海铂星科技有限公司</item>
+        <item>上海铂星科技有限公司</item>
+        <item>上海铂星科技有限公司</item>
+    </string-array>
+
+
+    <string-array name="array_type_2023">
+        <item>正常工资薪金</item>
+        <item>正常工资薪金</item>
+        <item>正常工资薪金</item>
+        <item>全年一次性奖金收入</item>
+        <item>正常工资薪金</item>
+        <item>正常工资薪金</item>
+        <item>正常工资薪金</item>
+        <item>正常工资薪金</item>
+        <item>正常工资薪金</item>
+        <item>正常工资薪金</item>
+        <item>正常工资薪金</item>
+        <item>正常工资薪金</item>
+        <item>正常工资薪金</item>
+    </string-array>
+
+
+</resources>

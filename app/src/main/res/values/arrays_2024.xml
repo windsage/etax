@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 2024年数据 -->
+    <string-array name="array_month_2024">
+        <item>2024-01</item>
+        <item>2024-02</item>
+        <item>2024-03</item>
+        <item>2024-04</item>
+        <item>2024-05</item>
+        <item>2024-05</item>
+        <item>2024-06</item>
+        <item>2024-07</item>
+        <item>2024-08</item>
+        <item>2024-08</item>
+        <item>2024-09</item>
+        <item>2024-10</item>
+        <item>2024-11</item>
+        <item>2024-12</item>
+    </string-array>
+    <string-array name="array_salary_2024">
+        <item>65275.86</item>
+        <item>65275.86</item>
+        <item>65266.64</item>
+        <item>65271.25</item>
+        <item>221258.00</item>
+        <item>65266.64</item>
+        <item>75275.86</item>
+        <item>65271.25</item>
+        <item>327500.00</item>
+        <item>38200.00</item>
+        <item>40000.00</item>
+        <item>80000.00</item>
+        <item>80000.00</item>
+        <item>80000.00</item>
+    </string-array>
+
+    <string-array name="array_tax_2024">
+        <item>2035.32</item>
+        <item>4555.32</item>
+        <item>4554.40</item>
+        <item>8374.76</item>
+        <item>42841.60</item>
+        <item>9108.80</item>
+        <item>11110.64</item>
+        <item>10551.91</item>
+        <item>0.00</item>
+        <item>4598.32</item>
+        <item>605.80</item>
+        <item>4912.86</item>
+        <item>6019.33</item>
+        <item>11696.65</item>
+    </string-array>
+
+
+    <string-array name="array_company_2024">
+        <item>上海铂星科技有限公司</item>
+        <item>上海铂星科技有限公司</item>
+        <item>上海铂星科技有限公司</item>
+        <item>上海铂星科技有限公司</item>
+        <item>上海铂星科技有限公司</item>
+        <item>上海铂星科技有限公司</item>
+        <item>上海铂星科技有限公司</item>
+        <item>上海铂星科技有限公司</item>
+        <item>上海铂星科技有限公司</item>
+        <item>上海铂星科技有限公司</item>
+        <item>上海传音信息技术有限公司</item>
+        <item>上海传音信息技术有限公司</item>
+        <item>上海传音信息技术有限公司</item>
+        <item>上海传音信息技术有限公司</item>
+    </string-array>
+
+
+    <string-array name="array_type_2024">
+        <item>正常工资薪金</item>
+        <item>正常工资薪金</item>
+        <item>正常工资薪金</item>
+        <item>正常工资薪金</item>
+        <item>全年一次性奖金收入</item>
+        <item>正常工资薪金</item>
+        <item>正常工资薪金</item>
+        <item>正常工资薪金</item>
+        <item>解除劳动合同一次性补偿</item>
+        <item>正常工资薪金</item>
+        <item>正常工资薪金</item>
+        <item>正常工资薪金</item>
+        <item>正常工资薪金</item>
+        <item>正常工资薪金</item>
+    </string-array>
+
+
+</resources>
