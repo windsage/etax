@@ -21,7 +21,7 @@ public class HomeActivity extends AppCompatActivity {
 
     private FragmentManager manager;
     private FragmentTransaction transaction;
-    private Button btn1, btn2, btn3, btn4, btn5, btnQuery2023, btnQuery2024, btnQuery2025;
+    private Button btn1, btn2, btn3, btn4, btn5, btnQuery2025;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,20 +32,7 @@ public class HomeActivity extends AppCompatActivity {
         btn3 = findViewById(R.id.btn3);
         btn4 = findViewById(R.id.btn4);
         btn5 = findViewById(R.id.btn5);
-        btnQuery2023 = findViewById(R.id.btn_query_2023);
-        btnQuery2024 = findViewById(R.id.btn_query_2024);
         btnQuery2025 = findViewById(R.id.btn_query_2025);
-        btnQuery2023.setOnClickListener(v -> {
-            Intent intent = new Intent(HomeActivity.this, QueryActivity.class);
-            intent.putExtra("year", 2023);
-            startActivity(intent);
-        });
-
-        btnQuery2024.setOnClickListener(v -> {
-            Intent intent = new Intent(HomeActivity.this, QueryActivity.class);
-            intent.putExtra("year", 2024);
-            startActivity(intent);
-        });
         btnQuery2025.setOnClickListener(v -> {
             Intent intent = new Intent(HomeActivity.this, QueryActivity.class);
             intent.putExtra("year", 2025);
